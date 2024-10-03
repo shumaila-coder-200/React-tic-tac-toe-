@@ -1,0 +1,41 @@
+@font-face {
+  font-family: poppins;
+  font-weight: 800;
+  src: url(./Poppins-Black.ttf);
+}
+.square {
+  border: 1px solid gray;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+font-weight: 100;
+  /* font-family: poppins; */
+}
+
+button{
+  display: flex;
+  align-items: center;
+  margin-left: 583px;
+  /* border:none; */
+  /* background-color: aquamarine; */
+  /* width: 15vh; */
+  height: 40px;
+  border-radius:  2px solid black;
+}
+button:hover{
+  background-color: lightcoral;
+  height: 70px;
+  width: 70px;
+  border-radius:50%;
+
+  /* border-radius: 90px solid black; */
+}
+h1{
+  text-align: center;
+  font-size: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+}

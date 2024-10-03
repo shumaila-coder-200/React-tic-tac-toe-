@@ -1,0 +1,17 @@
+.board-row {
+  width: 50vw;
+  display: flex;
+  margin-left: 300px;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.board-container {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 40px;
+  margin: 40px;
+  text-align: center;
+}
+a {
+ color: rgb(223, 23, 103);
+}
