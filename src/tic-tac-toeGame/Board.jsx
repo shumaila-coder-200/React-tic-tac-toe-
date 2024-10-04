@@ -26,18 +26,21 @@ function Board() {
     return false;
   };
 
-  const checkDraw = () => {
+  const checkDraw=()=>{
     for (let status of state) {
       if (status === null) {
         return false;
       }
     }
     return true;
-  };
+  }
 
-  let isWinner = checkWinner();
+  const isWinner = checkWinner();
 
   const handleClick = (index) => {
+    if (state[index]!==null) {
+      return;
+    }
     const copyState = [...state];
     copyState[index] = isXTurn ? "X" : "O";
     setState(copyState);
@@ -53,21 +56,19 @@ function Board() {
     <>
       {checkWinner() ? (
         <div className='board-container'>
-          <h1> {isWinner} won the game</h1>
-          <h5>congratulations</h5>
-          <button onClick={handleReset}>GAME RESET</button>
+          <h1>{isWinner} won the game</h1>
+          <h3>CONGRATULATION</h3>
+          <button onClick={handleReset}>RESET GAME</button>
         </div>
       ) : checkDraw() ? (
         <div className='board-container'>
           <h1>MATCH IS DRAW</h1>
           <h3>BETTER LUCK NEXT TIME</h3>
-          <button onClick={handleReset}>GAME RESET</button>
+          <button onClick={handleReset}>RESET GAME</button>
         </div>
       ) : (
-        <>
-          <h1>
-            PLAYER <a>{isXTurn ? "X" : "O"}</a> Please move
-          </h1>
+            <>
+              <h1>PLAYER <a>{ isXTurn ? "X" : "O"}</a> play game</h1>
           <div className='board-container'>
             <div className='board-row'>
               <Square value={state[0]} onClick={() => handleClick(0)} />
